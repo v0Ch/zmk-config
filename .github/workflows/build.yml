@@ -40,10 +40,10 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 skeletyl_left_xiao.uf2
       - name: Archive (Skeletyl Left)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: skeletyl_firmware
-          path: skeletyl_left_nice_nano.uf2
+          path: skeletyl_left_xiao.uf2
       - name: West Build (Skeletyl Right)
         run: west build --pristine -s zmk/app -b xiao_ble -- -DSHIELD=tbkmini_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
@@ -52,9 +52,9 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 skeletyl_right_xiao.uf2
       - name: Archive (Skeletyl Right)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: skeletyl_firmware
-          path: skeletyl_right_nice_nano.uf2
+          path: skeletyl_right_xiao.uf2
 
 
