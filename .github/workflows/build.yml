@@ -38,7 +38,7 @@ jobs:
       - name: Skeletyl Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_left_nice_nano.uf2
+        run: cp build/zephyr/zmk.uf2 skeletyl_left_xiao.uf2
       - name: Archive (Skeletyl Left)
         uses: actions/upload-artifact@v2
         with:
@@ -50,7 +50,7 @@ jobs:
       - name: Skeletyl Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_right_nice_nano.uf2
+        run: cp build/zephyr/zmk.uf2 skeletyl_right_xiao.uf2
       - name: Archive (Skeletyl Right)
         uses: actions/upload-artifact@v2
         with:
